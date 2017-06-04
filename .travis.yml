@@ -6,9 +6,6 @@ branches:
   - master
 before_install:
 - cd generate; npm install; cd ..
-env:
-  global:
-  - S3_BUCKET=radiobadger.com
 script:
 - lsc generate/bin/generate.ls
 cache:
@@ -20,9 +17,8 @@ deploy:
   bucket: radiobadger.com
   skip_cleanup: true
   local-dir: out
-  endpoint: radiobadger.com.s3-website-eu-west-1.amazonaws.com
   region: eu-west-1
   access_key_id:
-    secure: "HFoeDF64RamK86QORLBjoya8Qdw69cU4Q7Rv2I7cZR32Zo4YJXau2pvtAo9rzHpmzUQga9/DbjsPdcPqm9A3OOooHNjj9wjiGZv3DcFu5vDfiq+qmdy1E8/eoDDTnMZA/eGc9wCEN3Ct6I3neJC+3a1LcGQiz01SfVqybEDzpNs="
+    secure: Wu/45RFK/z8tC0zSgkC1YrnPYVaZcSd37EoznkDM09x8tGTp1Jbq3pG/iA7eeeDtCxxV6API6B5KLvc76KHym59aE7U6qyzcAj0ZInxWjfvfl+TkDKtsl0RR+t7Q2+BpilmGPK4pkmirGftCqKxOVTYOPmt21ZrVY0ONbKtTr88=
   secret_access_key:
-    secure: "EaNuxMTxmiLngF4bLcdnrdoZtbZ5fQJnXIh1CNV/NYM/5ZtMPDQMF3O9/mnstMhRfph9pEkvFf/tD1MdKVQvyk3w8tCyV8v7QRdQ+HK0q+CdiN0zSdwZ63IyB9n5mDkalzeOEozxxcvNvTy0+E/IobGSdqo4UPxejW7mDbqCXfc="
+    secure: C/+IdAJLu9LSqgfQ3x9jHWNK22YKvmx4674dYD1h15CX3o5VqfzRojlnJb25QEAC9BB0vI0sGADgB1uqBELa5atfCHg08RS0qKrI9wnghOmH8RGVW6BGSIRs1hS6x5II1AzbqcLd5B+rYWme5vO0bHf+O3gONfpw4l7sP/kx7Rs=
