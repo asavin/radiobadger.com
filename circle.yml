@@ -9,4 +9,7 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync out/ s3://radiobadger.com/ --delete --acl public-read
+      - aws s3 sync out/ s3://radiobadger.com/ --acl public-read
+test:
+  override:
+    - "true"
