@@ -2,8 +2,9 @@ machine:
   node:
     version: 0.10
 compile:
-  - cd generate; npm install; cd ..
-  - lsc generate/bin/generate.ls
+  override:
+    - cd generate; npm install; cd ..
+    - lsc generate/bin/generate.ls
 deployment:
   prod:
     branch: master
